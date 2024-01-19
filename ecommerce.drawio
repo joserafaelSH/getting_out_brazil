@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-01-19T01:51:54.172Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="nlr-SJ3nOkxmAd6OXl8_" version="22.1.21" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-19T01:58:24.242Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="Spe7TFUYRuKShXubiac6" version="22.1.21" type="github">
   <diagram name="Page-1" id="K3UAgkECTmoRZ6JnhF8z">
-    <mxGraphModel dx="4097" dy="2109" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="100000000" pageHeight="100000000" math="0" shadow="0">
+    <mxGraphModel dx="4780" dy="2460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="100000000" pageHeight="100000000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -21,6 +21,27 @@
         </mxCell>
         <mxCell id="Ho2j7R6VXXGDHBP-JsYq-54" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#D9A741;gradientColor=none;" vertex="1" parent="1">
           <mxGeometry x="950" y="1337.79" width="73.5" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="Ho2j7R6VXXGDHBP-JsYq-55" value="&lt;b&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;Queue&lt;/font&gt;&lt;/b&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#D9A741;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="3010" y="860" width="260" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="Ho2j7R6VXXGDHBP-JsYq-56" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;&lt;b&gt;Redis Cache&lt;br&gt;&lt;/b&gt;&lt;/span&gt;" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Cache_Redis_Product.svg;" vertex="1" parent="1">
+          <mxGeometry x="3010" y="1385.79" width="266.92" height="224.21" as="geometry" />
+        </mxCell>
+        <mxCell id="Ho2j7R6VXXGDHBP-JsYq-57" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;&lt;b&gt;User&lt;/b&gt;&lt;/font&gt;" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3027.5" y="1830" width="225" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Ho2j7R6VXXGDHBP-JsYq-58" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;&lt;b&gt;&lt;br&gt;Load Balancer&lt;br&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.classic_load_balancer;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="2990" y="2250" width="359" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Ho2j7R6VXXGDHBP-JsYq-60" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 50px;&quot;&gt;NoSql DB&lt;/font&gt;&lt;/b&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="3540" y="810.0000000000001" width="300" height="362.11" as="geometry" />
+        </mxCell>
+        <mxCell id="Ho2j7R6VXXGDHBP-JsYq-61" value="&lt;b&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;Sql DB&lt;/font&gt;&lt;/b&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/unicons-line-vol-2/24/database-128.png" vertex="1" parent="1">
+          <mxGeometry x="3480" y="1309.9999999999998" width="440" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="Ho2j7R6VXXGDHBP-JsYq-62" value="&lt;b&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;Service Name&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3520" y="1960" width="470" height="250" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
