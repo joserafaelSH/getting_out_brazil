@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-01-20T18:41:52.158Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="EMOw6EQvUHNMGZ2SxEDR" version="22.1.21" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-20T18:43:23.982Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="WQZf-1CoN-2g5kKY8orD" version="22.1.21" type="github">
   <diagram name="Page-1" id="K3UAgkECTmoRZ6JnhF8z">
-    <mxGraphModel dx="4780" dy="2460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="100000000" pageHeight="100000000" math="0" shadow="0">
+    <mxGraphModel dx="7170" dy="3690" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="100000000" pageHeight="100000000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -127,6 +127,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="BfkKTybxNyAKzRBTMPO3-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=20;" edge="1" parent="1" source="BfkKTybxNyAKzRBTMPO3-6" target="BfkKTybxNyAKzRBTMPO3-45">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="7805" y="4670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="BfkKTybxNyAKzRBTMPO3-6" value="&lt;b&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;Search Service&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="7570" y="4155" width="470" height="250" as="geometry" />
         </mxCell>
@@ -203,14 +210,31 @@
         <mxCell id="BfkKTybxNyAKzRBTMPO3-37" value="&lt;b&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;User DB&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/unicons-line-vol-2/24/database-128.png" vertex="1" parent="1">
           <mxGeometry x="5172.5" y="3100" width="440" height="440" as="geometry" />
         </mxCell>
-        <mxCell id="BfkKTybxNyAKzRBTMPO3-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BfkKTybxNyAKzRBTMPO3-39" target="BfkKTybxNyAKzRBTMPO3-41">
+        <mxCell id="BfkKTybxNyAKzRBTMPO3-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=20;" edge="1" parent="1" source="BfkKTybxNyAKzRBTMPO3-39" target="BfkKTybxNyAKzRBTMPO3-41">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="BfkKTybxNyAKzRBTMPO3-39" value="&lt;b&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;Recommendation DB&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/unicons-line-vol-2/24/database-128.png" vertex="1" parent="1">
           <mxGeometry x="9050" y="3600" width="440" height="440" as="geometry" />
         </mxCell>
         <mxCell id="BfkKTybxNyAKzRBTMPO3-41" value="&lt;b&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;Generate Recommendation&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=20;" vertex="1" parent="1">
-          <mxGeometry x="10000" y="3695" width="470" height="250" as="geometry" />
+          <mxGeometry x="10200" y="3695" width="470" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="BfkKTybxNyAKzRBTMPO3-44" value="&lt;b&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;Place Order Service&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="9410" y="2910" width="470" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="BfkKTybxNyAKzRBTMPO3-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=20;" edge="1" parent="1" source="BfkKTybxNyAKzRBTMPO3-45" target="BfkKTybxNyAKzRBTMPO3-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="9320" y="4290" />
+              <mxPoint x="10435" y="4290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BfkKTybxNyAKzRBTMPO3-45" value="&lt;b&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;Search history DB&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/unicons-line-vol-2/24/database-128.png" vertex="1" parent="1">
+          <mxGeometry x="9100" y="4430" width="440" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="BfkKTybxNyAKzRBTMPO3-47" value="&lt;b&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;Queue&lt;/font&gt;&lt;/b&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#D9A741;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="8380" y="5090" width="260" height="190" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
