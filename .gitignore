@@ -1,0 +1,25 @@
+# user_crud_nest_js
+/user_crud_nest_js/dist
+/user_crud_nest_js/node_modules
+/user_crud_nest_js/.env.dev
+/user_crud_nest_js/.env.test
+/user_crud_nest_js/.pnpm-store
+
+
+
+# Logs
+*logs
+*.log
+*npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+
+# IDE - VSCode
+*.vscode/*
+*!.vscode/settings.json
+*!.vscode/tasks.json
+*!.vscode/launch.json
+*!.vscode/extensions.json
+
