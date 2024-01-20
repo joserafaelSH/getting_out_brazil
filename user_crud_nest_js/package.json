@@ -6,6 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "setup": "pnpm i && touch .env.dev2 .env.test2",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -21,10 +22,10 @@
     "test:cov-short": "npx dotenv-cli -e .env.test -- jest --runInBand --coverage  --coverageReporters=\"text-summary\" ",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "npx dotenv-cli -e .env.test -- jest --runInBand --config ./jest.e2e.config.ts"
-
   },
   "dependencies": {
     "@commitlint/config-conventional": "^17.3.0",
+    "@faker-js/faker": "^8.3.1",
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^3.1.1",
     "@nestjs/core": "^10.0.0",
@@ -34,6 +35,7 @@
     "class-validator": "^0.14.1",
     "commitizen": "^4.3.0",
     "dotenv-cli": "^7.3.0",
+    "faker": "^6.6.6",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
     "swagger-themes": "^1.2.30",
