@@ -1,5 +1,5 @@
 import { Controller, Get, Inject } from '@nestjs/common';
-import { IEnvironmentVariables } from './config/environment/environment.interface';
+import { IEnvironmentVariables } from './shared/infra/config/environment/environment.interface';
 
 type Message = {
   message: string;

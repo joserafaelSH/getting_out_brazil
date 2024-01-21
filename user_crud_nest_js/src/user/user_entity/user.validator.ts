@@ -1,4 +1,4 @@
-import { ClassValidatorFields } from '@/entity/class-validator-fields';
+import { ClassValidatorFields } from '@/shared/domain/entity/class-validator-fields';
 import {
   IsBoolean,
   IsDate,

@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
-import { EnvConfigModule } from './config/environment/env-config/env-config.module';
+import { EnvConfigModule } from './shared/infra/config/environment/env-config/env-config.module';
 
 describe('AppController', () => {
   let appController: AppController;
