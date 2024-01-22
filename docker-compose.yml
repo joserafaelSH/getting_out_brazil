@@ -1,20 +1,20 @@
 version: '3'
 
 services:
-  # user_db:
-  #   container_name: user_db
-  #   image: postgres:latest
-  #   restart: always
-  #   environment:
-  #     POSTGRES_USER: ecommerce_user_db
-  #     POSTGRES_PASSWORD: 12345678!
-  #     POSTGRES_DB: ecommerce_user_db
-  #   ports:
-  #     - 5435:5432
-  #   volumes:
-  #     - ./ecommerce_user_db:/var/lib/postgresql/data
-  #   networks:
-  #     - ecommerce_network  
+  user_db:
+    container_name: user_db
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: ecommerce_user_db
+      POSTGRES_PASSWORD: 12345678!
+      POSTGRES_DB: ecommerce_user_db
+    ports:
+      - 5435:5432
+    volumes:
+      - ./ecommerce_user_db:/var/lib/postgresql/data
+    networks:
+      - ecommerce_network  
   
     
   # address_db:
