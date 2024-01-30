@@ -4,8 +4,15 @@ import { healthCheck } from "./routes/health-check";
 import { createUser } from "./routes/create-user";
 import { getUserByEmail } from "./routes/get-user-by-email";
 import { updateUser } from "./routes/update-user";
+import swagger from "@elysiajs/swagger";
 
 export const server = new Elysia()
+  .use(
+    swagger({
+      path: "/api",
+      theme: "material",
+    })
+  )
   .use(healthCheck)
   .use(createUser)
   .use(getUserByEmail)
