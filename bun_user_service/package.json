@@ -5,7 +5,8 @@
     "start": "NODE_ENV=production bun src/index.ts",
     "test": "bun test",
     "migration:generate": "drizzle-kit generate:pg --schema=./src/db/schema.ts --out=./src/db/migrations",
-    "migration:run": "bun run src/db/migrate.ts"
+    "migration:run": "bun run src/db/migrate.ts",
+    "drizzle:studio": "drizzle-kit studio --port 5555 --verbose"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.0",
@@ -22,8 +23,10 @@
   "dependencies": {
     "@paralleldrive/cuid2": "^2.2.2",
     "cuid": "^3.0.0",
+    "dotenv": "^16.4.1",
     "drizzle-orm": "^0.29.3",
     "elysia": "^0.8.15",
+    "pg": "^8.11.3",
     "postgres": "^3.4.3"
   }
 }

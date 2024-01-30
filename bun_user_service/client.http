@@ -17,5 +17,23 @@ Content-Type: {{contentType}}
   "password": "teste",
   "first_name": "teste",
   "last_name": "teste",
-  "email": "teste"
+  "email": "teste@teste"
+}
+
+###
+GET {{host}}/api/v1/get/user?email=teste
+Content-Type: {{contentType}}
+
+
+###
+PUT {{host}}/api/v1/update/user?id=pbfbwuqk2dx0brpny92c4ink
+Content-Type: {{contentType}}
+
+{
+  "user_name": "teste123",
+  "password": "teste123",
+  "first_name": "teste123",
+  "last_name": "teste123",
+  "email": "1",
+  "last_login": "2019-01-01T00:00:00Z"
 }

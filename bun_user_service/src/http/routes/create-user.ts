@@ -4,8 +4,8 @@ import { users } from "../../db/schema";
 import { eq } from "drizzle-orm";
 import { User } from "../../domain/entity/user/user";
 
-export const updateUser = new Elysia().post(
-  "/api/v1/update/user",
+export const createUser = new Elysia().post(
+  "/api/v1/create/user",
   async ({ body }) => {
     const user = await db
       .select()
