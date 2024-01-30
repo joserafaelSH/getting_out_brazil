@@ -143,15 +143,15 @@ services:
   #     - ecommerce_network
   
 
-  user_crud:
-    container_name: user_crud
-    build: ./user_crud_nest_js
-    entrypoint: .docker/entrypoint.sh
-    ports:
-      - 3000:3000
-      - 5555:5555
-    volumes:
-      - ./user_crud_nest_js:/home/node/app
+  # user_crud:
+  #   container_name: bun_user_service
+  #   build: ./bun_user_service
+  #   entrypoint: .docker/entrypoint.sh
+  #   ports:
+  #     - 3000:3000
+  #     - 4000:4000
+  #   volumes:
+  #     - ./bun_user_service:/home/node/app
 
   
   # user_auth:

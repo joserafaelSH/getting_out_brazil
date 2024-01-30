@@ -1,9 +1,10 @@
-# user_crud_nest_js
-/user_crud_nest_js/dist
-/user_crud_nest_js/node_modules
-/user_crud_nest_js/.env.dev
-/user_crud_nest_js/.env.test
-/user_crud_nest_js/.pnpm-store
+# bun_user_service
+/bun_user_service/dist
+/bun_user_service/node_modules
+/bun_user_service/.env.development
+/bun_user_service/.env.test
+/bun_user_service/.pnpm-store
+
 
 
 
@@ -23,3 +24,5 @@ pnpm-debug.log*
 *!.vscode/launch.json
 *!.vscode/extensions.json
 
+
+ecommerce_user_db

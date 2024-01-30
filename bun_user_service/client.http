@@ -1,0 +1,21 @@
+@hostname = http://localhost
+@port = 3000
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+###
+GET {{host}}/api/v1/health-check
+Content-Type: {{contentType}}
+
+
+###
+POST {{host}}/api/v1/create/user
+Content-Type: {{contentType}}
+
+{
+  "user_name": "teste",
+  "password": "teste",
+  "first_name": "teste",
+  "last_name": "teste",
+  "email": "teste"
+}
