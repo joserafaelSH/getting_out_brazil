@@ -3,10 +3,34 @@ import { db } from "../../db/db";
 import { users } from "../../db/schema";
 import { eq } from "drizzle-orm";
 import { User } from "../../domain/entity/user/user";
+import bearer from "@elysiajs/bearer";
+import type { IAuthService } from "../../gateway/auth.service.interface";
+import { AuthServiceMock } from "../../gateway/auth.service.mock";
 
-export const updateUser = new Elysia().put(
+export const updateUser = new Elysia().use(bearer()).put(
   "/api/v1/update/user",
-  async ({ body, query }) => {
+  async ({ body, query, bearer }) => {
+    if (!bearer) {
+      return {
+        status: 401,
+        body: {
+          message: "Unauthorized",
+        },
+      };
+    }
+
+    const authService: IAuthService = new AuthServiceMock();
+    const isValid = await authService.validateToken(bearer);
+
+    if (!isValid) {
+      return {
+        status: 401,
+        body: {
+          message: "Unauthorized",
+        },
+      };
+    }
+
     const { id } = query;
 
     const user = await db.select().from(users).where(eq(users.id, id));

@@ -5,8 +5,11 @@ import { createUser } from "./routes/create-user";
 import { getUserByEmail } from "./routes/get-user-by-email";
 import { updateUser } from "./routes/update-user";
 import swagger from "@elysiajs/swagger";
+import cors from "@elysiajs/cors";
 
 export const server = new Elysia()
+
+  .use(cors({ methods: ["GET", "POST", "PUT"] }))
   .use(
     swagger({
       path: "/api",

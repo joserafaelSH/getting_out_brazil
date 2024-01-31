@@ -21,8 +21,11 @@ Content-Type: {{contentType}}
 }
 
 ###
-GET {{host}}/api/v1/get/user?email=teste
+GET {{host}}/api/v1/get/user?email=teste@teste
 Content-Type: {{contentType}}
+Authorization: Bearer xxx
+
+
 
 
 ###

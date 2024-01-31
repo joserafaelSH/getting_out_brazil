@@ -1,14 +1,36 @@
 import { Elysia, t } from "elysia";
-import { db } from "../../db/db";
 import { users } from "../../db/schema";
 import { eq } from "drizzle-orm";
 import { User } from "../../domain/entity/user/user";
+import { db } from "../../db/db";
+import bearer from "@elysiajs/bearer";
+import { AuthServiceMock } from "../../gateway/auth.service.mock";
+import type { IAuthService } from "../../gateway/auth.service.interface";
 
-export const getUserByEmail = new Elysia().get(
+export const getUserByEmail = new Elysia().use(bearer()).get(
   "/api/v1/get/user",
-  async ({ query }) => {
+  async ({ query, bearer }) => {
+    if (!bearer) {
+      return {
+        status: 401,
+        body: {
+          message: "Unauthorized",
+        },
+      };
+    }
+
+    const authService: IAuthService = new AuthServiceMock();
+    if (!(await authService.validateToken(bearer))) {
+      return {
+        status: 401,
+        body: {
+          message: "Unauthorized",
+        },
+      };
+    }
+
     const { email } = query;
-    console.log(email);
+
     const user = await db.select().from(users).where(eq(users.email, email));
     if (user.length === 0) {
       return {
