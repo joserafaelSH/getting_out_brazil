@@ -6,6 +6,7 @@ import { db } from "../../db/db";
 import bearer from "@elysiajs/bearer";
 import { AuthServiceMock } from "../../gateway/auth.service.mock";
 import type { IAuthService } from "../../gateway/auth.service.interface";
+import { emailValidator } from "../../domain/bun.validators";
 
 export const getUserByEmail = new Elysia().use(bearer()).get(
   "/api/v1/get/user",
@@ -60,7 +61,7 @@ export const getUserByEmail = new Elysia().use(bearer()).get(
   },
   {
     query: t.Object({
-      email: t.String(),
+      ...emailValidator,
     }),
   }
 );

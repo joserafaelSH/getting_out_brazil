@@ -13,11 +13,11 @@ POST {{host}}/api/v1/create/user
 Content-Type: {{contentType}}
 
 {
-  "user_name": "teste",
-  "password": "teste",
-  "first_name": "teste",
-  "last_name": "teste",
-  "email": "teste@teste"
+  "user_name": "as",
+  "password": "aaaAAA12345678@",
+  "first_name": "testeteste",
+  "last_name": "testeteste",
+  "email": "teste@testseds2.com"
 }
 
 ###

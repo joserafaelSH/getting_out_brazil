@@ -6,6 +6,14 @@ import { User } from "../../domain/entity/user/user";
 import bearer from "@elysiajs/bearer";
 import type { IAuthService } from "../../gateway/auth.service.interface";
 import { AuthServiceMock } from "../../gateway/auth.service.mock";
+import {
+  userNameValidator,
+  passwordValidator,
+  firstNameValidator,
+  lastNameValidator,
+  emailValidator,
+  lastLoginValidator,
+} from "../../domain/bun.validators";
 
 export const updateUser = new Elysia().use(bearer()).put(
   "/api/v1/update/user",
@@ -69,12 +77,12 @@ export const updateUser = new Elysia().use(bearer()).put(
   },
   {
     body: t.Object({
-      user_name: t.String(),
-      password: t.String(),
-      first_name: t.String(),
-      last_name: t.String(),
-      email: t.String(),
-      last_login: t.String() || t.Null(),
+      ...userNameValidator,
+      ...passwordValidator,
+      ...firstNameValidator,
+      ...lastNameValidator,
+      ...emailValidator,
+      ...lastLoginValidator,
     }),
     query: t.Object({
       id: t.String(),

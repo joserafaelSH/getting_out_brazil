@@ -9,7 +9,15 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+bun dev
 ```
 
-This project was created using `bun init` in bun v1.0.25. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+### 2024-01-31 The user vercie are "ready" for use, but he needs a comeback to implements somethings when auth services to be already implemented
+
+[] Auth service integrations
+
+[] End test implementations
+
+### Improvements
+
+[] Send email for validate new accounts -- Email Service -- AWS SES -- boring work

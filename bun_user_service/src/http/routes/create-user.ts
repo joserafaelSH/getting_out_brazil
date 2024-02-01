@@ -3,6 +3,13 @@ import { db } from "../../db/db";
 import { users } from "../../db/schema";
 import { eq } from "drizzle-orm";
 import { User } from "../../domain/entity/user/user";
+import {
+  userNameValidator,
+  passwordValidator,
+  firstNameValidator,
+  lastNameValidator,
+  emailValidator,
+} from "../../domain/bun.validators";
 
 export const createUser = new Elysia().post(
   "/api/v1/create/user",
@@ -41,11 +48,11 @@ export const createUser = new Elysia().post(
   },
   {
     body: t.Object({
-      user_name: t.String(),
-      password: t.String(),
-      first_name: t.String(),
-      last_name: t.String(),
-      email: t.String(),
+      ...userNameValidator,
+      ...passwordValidator,
+      ...firstNameValidator,
+      ...lastNameValidator,
+      ...emailValidator,
     }),
   }
 );

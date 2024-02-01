@@ -18,11 +18,11 @@ export class User extends Entity<UserProps> {
   }
 
   update(props: UserProps): void {
-    this.props.user_name = props.user_name;
-    this.props.password = props.password;
-    this.props.first_name = props.first_name;
-    this.props.last_name = props.last_name;
-    this.props.email = props.email;
+    this.props.user_name = props.user_name || this.props.user_name;
+    this.props.password = props.password || this.props.password;
+    this.props.first_name = props.first_name || this.props.first_name;
+    this.props.last_name = props.last_name || this.props.last_name;
+    this.props.email = props.email || this.props.email;
     this.props.last_login = props.last_login;
   }
 
