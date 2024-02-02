@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package github.com.joserafaelSH.getting_out_brazil.go_auth_service;
+
+option go_package = "./pb";
+
+message SendUserToAuth {
+    string email = 1;
+    string password = 2;
+
+}
+message AtuhResult {
+    bool result = 1;
+}
+service PixService {
+    rpc AuthUser (SendUserToAuth) returns (AtuhResult) {};
+
+}
