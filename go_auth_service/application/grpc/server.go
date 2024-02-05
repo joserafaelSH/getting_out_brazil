@@ -5,6 +5,8 @@ import (
 	"log"
 	"net"
 
+	"github.com/joserafaelSH/getting_out_brazil/go_auth_service/application/grpc/pb"
+	"github.com/joserafaelSH/getting_out_brazil/go_auth_service/application/usecase"
 	"github.com/joserafaelSH/getting_out_brazil/go_auth_service/infrastructure/repository"
 
 	"github.com/jinzhu/gorm"
@@ -16,11 +18,10 @@ func StartGrpcServer(database *gorm.DB, port int) {
 	grpcServer := grpc.NewServer()
 	reflection.Register(grpcServer)
 
-	// pixRepository := repository.PixKeyRepositoryDb{Db: database}
 	userRepository := repository.UserRpositoryDb{Db: database}
-	// pixUseCase := usecase.PixUseCase{PixKeyRepository: pixRepository}
-	// pixGrpcService := NewPixGrpcService(pixUseCase)
-	// pb.RegisterPixServiceServer(grpcServer, pixGrpcService)
+	authUseCase := usecase.AuthUseCase{Db: userRepository}
+	authGrpcService := NewAuthGrpcService(authUseCase)
+	pb.RegisterAuthServiceServer(grpcServer, authGrpcService)
 
 	address := fmt.Sprintf("0.0.0.0:%d", port)
 	listener, err := net.Listen("tcp", address)

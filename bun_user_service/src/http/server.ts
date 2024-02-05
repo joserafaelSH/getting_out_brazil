@@ -22,7 +22,7 @@ export const server = new Elysia()
   })
   .use(
     logger({
-      autoLogging: true, // default
+      autoLogging: true,
     })
   )
   .use(cors({ methods: ["GET", "POST", "PUT"] }))

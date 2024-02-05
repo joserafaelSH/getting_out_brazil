@@ -30,6 +30,7 @@ func ConnectDB(env string) *gorm.DB {
 
 	if env != "test" {
 		dsn = os.Getenv("dsn")
+
 		db, err = gorm.Open(os.Getenv("dbType"), dsn)
 	} else {
 		dsn = os.Getenv("dsnTest")

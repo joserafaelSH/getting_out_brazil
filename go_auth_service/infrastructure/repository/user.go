@@ -16,7 +16,7 @@ func (d UserRpositoryDb) FindUserByEmail(email string) (*model.User, error) {
 	d.Db.First(&user, "email = ?", email)
 
 	if user.ID == "" {
-		return nil, fmt.Errorf("no account found")
+		return &user, fmt.Errorf("no account found")
 	}
 	return &user, nil
 }

@@ -9,10 +9,11 @@ message SendUserToAuth {
     string password = 2;
 
 }
-message AtuhResult {
+message AuthResult {
     bool result = 1;
 }
-service PixService {
-    rpc AuthUser (SendUserToAuth) returns (AtuhResult) {};
+
+service AuthService {
+    rpc AuthUser (SendUserToAuth) returns (AuthResult) {};
 
 }

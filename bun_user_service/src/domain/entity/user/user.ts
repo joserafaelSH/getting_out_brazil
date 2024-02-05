@@ -1,4 +1,5 @@
 import { Entity } from "../entity";
+import { hashSync } from "bcrypt";
 
 export type UserProps = {
   user_name: string;
@@ -14,12 +15,13 @@ export class User extends Entity<UserProps> {
   constructor(props: UserProps, id?: string) {
     props.last_login = null;
     props.created_at = new Date();
+    props.password = hashSync(props.password, 10);
     super(props, id);
   }
 
   update(props: UserProps): void {
     this.props.user_name = props.user_name || this.props.user_name;
-    this.props.password = props.password || this.props.password;
+    this.props.password = hashSync(props.password, 10) || this.props.password;
     this.props.first_name = props.first_name || this.props.first_name;
     this.props.last_name = props.last_name || this.props.last_name;
     this.props.email = props.email || this.props.email;

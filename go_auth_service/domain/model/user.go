@@ -7,16 +7,6 @@ import (
 	"github.com/go-playground/validator/v10"
 )
 
-// export type UserProps = {
-// 	user_name: string;
-// 	password: string;
-// 	first_name: string;
-// 	last_name: string;
-// 	email: string;
-// 	last_login: Date | null;
-// 	created_at?: Date;
-//   };
-
 type User struct {
 	ID        string `json:"id" gorm:"primary_key"`
 	UserName  string `json:"user_name" gorm:"type:varchar(255);unique_index"`

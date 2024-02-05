@@ -10,12 +10,38 @@ services:
       POSTGRES_PASSWORD: 12345678!
       POSTGRES_DB: ecommerce_user_db
     ports:
-      - 5435:5432
+      - 5432:5432
     volumes:
       - ./ecommerce_user_db:/var/lib/postgresql/data
     networks:
+      - ecommerce_network
+
+
+  user_auth:
+    container_name: user_auth
+    build: ./go_auth_service 
+    ports:
+      - 8002:8002
+    depends_on:
+      - user_db
+    networks:
       - ecommerce_network  
+    volumes:
+      - ./go_auth_service:/go/src/
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    
   
+  user_crud:
+    container_name: bun_user_service
+    build: ./bun_user_service
+    entrypoint: .docker/entrypoint.sh
+    ports:
+      - 3000:3000
+      - 4000:4000
+    volumes:
+      - ./bun_user_service:/app
+
     
   # address_db:
   #   container_name: address_db
@@ -143,27 +169,10 @@ services:
   #     - ecommerce_network
   
 
-  # user_crud:
-  #   container_name: bun_user_service
-  #   build: ./bun_user_service
-  #   entrypoint: .docker/entrypoint.sh
-  #   ports:
-  #     - 3000:3000
-  #     - 4000:4000
-  #   volumes:
-  #     - ./bun_user_service:/home/node/app
+
 
   
-  # user_auth:
-  #   container_name: user_auth
-  #   build: <>
-  #   restart: always
-  #   ports:
-  #     - 8002:8002
-  #   depends_on:
-  #     - user_db
-  #   networks:
-  #     - ecommerce_network
+
   
   # recommendation:
   #   container_name: recommendation
